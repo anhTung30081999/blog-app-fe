@@ -34,10 +34,10 @@ jobs:
           tags: tungtk99/my-blog-web-fe:latest
       
       - name: Execute command on EC2
-        uses: appleboy/ssh-action@v0.1.6
+        uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.EC2_HOST }}
-          username: ec2-user
+          username: tungtk
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             sudo docker pull tungtk99/my-blog-web-fe:latest
